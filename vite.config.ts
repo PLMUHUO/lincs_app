@@ -17,15 +17,17 @@ export default defineConfig({
     },
   },
   base: '/lincs_app/', // 根据GitHub仓库名称配置
+  // 确保构建输出的文件具有正确的MIME类型
   build: {
-    // 确保生成的文件具有正确的扩展名和MIME类型
+    outDir: 'dist',
+    assetsDir: 'assets',
+    assetsInlineLimit: 0,
+    // 确保JavaScript文件使用正确的扩展名
     rollupOptions: {
       output: {
-        assetFileNames: 'assets/[name]-[hash][extname]',
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-        // 确保JavaScript模块使用正确的MIME类型
-        format: 'es'
+        assetFileNames: 'assets/[name].[hash][extname]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js'
       }
     }
   }
