@@ -16,7 +16,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  base: '/lincs_app/', // 根据GitHub仓库名称配置
+  base: '/', // 根据GitHub仓库名称配置
   // 禁用ES模块，使用传统脚本
   build: {
     // 确保构建输出的文件具有正确的扩展名和MIME类型
