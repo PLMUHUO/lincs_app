@@ -22,12 +22,16 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     assetsInlineLimit: 0,
-    // 确保JavaScript文件使用正确的扩展名
+    // 使用IIFE格式避免ES模块MIME类型问题
     rollupOptions: {
       output: {
         assetFileNames: 'assets/[name].[hash][extname]',
         chunkFileNames: 'assets/[name].[hash].js',
-        entryFileNames: 'assets/[name].[hash].js'
+        entryFileNames: 'assets/[name].[hash].js',
+        // 使用IIFE格式，避免ES模块的MIME类型问题
+        format: 'iife',
+        // 提供全局变量名
+        name: 'LincsApp'
       }
     }
   }

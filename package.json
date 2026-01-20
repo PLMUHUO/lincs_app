@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && echo '' > dist/.nojekyll",
+    "build": "vite build && echo '' > dist/.nojekyll && node fix-html.cjs",
     "preview": "vite preview"
   },
   "dependencies": {
