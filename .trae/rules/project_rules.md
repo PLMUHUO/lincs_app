@@ -1,0 +1,2 @@
+1.PowerShell不支持&&操作符
+2.使用PowerShell命令检查文件扩展名和内容类型
