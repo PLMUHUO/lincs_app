@@ -30,5 +30,7 @@ export default defineConfig({
         manualChunks: undefined
       }
     }
-  }
+  },
+  // 配置publicDir，确保PWA相关文件被正确复制
+  publicDir: 'public'
 })
